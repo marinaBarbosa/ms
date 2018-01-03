@@ -6,4 +6,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_currency_list">CurrencyList</string>
+    <string name="google_maps_key">AIzaSyCFPHrAm9LRKb6uEU99dFZ3yu8tmVkysOg</string>
+    <string name="title_activity_map_show">Map</string>
+    <string name="title_activity_calculate_currency">calculate_currency</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

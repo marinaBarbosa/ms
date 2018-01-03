@@ -5,18 +5,21 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.example.marin.ms_pb_17"
-        minSdkVersion 9
+        minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
     }
 }
 
@@ -31,5 +34,7 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:25.2.0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.google.android.gms:play-services:+'
+
     testCompile 'junit:junit:4.12'
 }
