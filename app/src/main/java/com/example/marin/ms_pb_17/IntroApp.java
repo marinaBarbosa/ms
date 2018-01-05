@@ -43,6 +43,7 @@ public class IntroApp extends Activity implements SensorEventListener {
                 startActivity(intent);
             }
         });
+
         //declaring Sensor Manager and sensor type
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -57,17 +58,13 @@ public class IntroApp extends Activity implements SensorEventListener {
         float x = event.values[0];
         float y = event.values[1];
         if (Math.abs(x) > Math.abs(y)) {
-            if (x < 0) {
+            if (x < 0) { //right
                 Intent intent = new Intent(IntroApp.this, MapsActivity.class);
                 startActivity(intent);
-                //image.setImageResource(R.drawable.right);
-                //textView.setText("You tilt the device right");
             }
-            if (x > 0) {
+            if (x > 0) { //left
                 Intent intent = new Intent(IntroApp.this, MainActivity.class);
                 startActivity(intent);
-                //image.setImageResource(R.drawable.left);
-                //textView.setText("You tilt the device left");
             }
         }
     }
